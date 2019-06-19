@@ -119,7 +119,7 @@
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="no" active="no"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="no" active="no"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="no" active="no"/>
-<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="no" active="no"/>
 <layer number="202" name="202bmp" color="3" fill="10" visible="no" active="no"/>
 <layer number="203" name="203bmp" color="4" fill="10" visible="no" active="no"/>
@@ -162,10 +162,6 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="0" y2="25.4" width="0.2032" layer="20"/>
-<wire x1="0" y1="25.4" x2="25.4" y2="25.4" width="0.2032" layer="20"/>
-<wire x1="25.4" y1="25.4" x2="25.4" y2="0" width="0.2032" layer="20"/>
-<wire x1="25.4" y1="0" x2="0" y2="0" width="0.2032" layer="20"/>
 <text x="16.51" y="-21.59" size="1.778" layer="51">Pete Lewis</text>
 <text x="8.509" y="10.414" size="0.6096" layer="25">CCS811</text>
 <text x="14.859" y="10.541" size="0.6096" layer="25">BME280</text>
@@ -176,6 +172,19 @@
 <dimension x1="2.54" y1="22.86" x2="0" y2="22.86" x3="1.27" y3="26.67" textsize="1.778" layer="47"/>
 <dimension x1="22.86" y1="22.86" x2="0" y2="22.86" x3="11.43" y3="30.48" textsize="1.778" layer="47"/>
 <text x="-1.27" y="-12.7" size="1.778" layer="47">Measurements in mm</text>
+<wire x1="22.225" y1="12.7" x2="15.982815625" y2="22.914484375" width="0.2032" layer="20"/>
+<wire x1="15.982815625" y1="22.914484375" x2="13.81548125" y2="24.13" width="0.2032" layer="20" curve="58.570451"/>
+<wire x1="13.81548125" y1="24.13" x2="11.58451875" y2="24.13" width="0.2032" layer="20"/>
+<wire x1="11.58451875" y1="24.13" x2="9.417184375" y2="22.914484375" width="0.2032" layer="20" curve="58.570391"/>
+<wire x1="9.417184375" y1="22.914484375" x2="3.175" y2="12.7" width="0.2032" layer="20"/>
+<wire x1="3.175" y1="12.7" x2="2.794" y2="11.43" width="0.2032" layer="20"/>
+<wire x1="22.606" y1="11.43" x2="22.225" y2="12.7" width="0.2032" layer="20"/>
+<text x="15.24" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">GND</text>
+<text x="10.16" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">VCC</text>
+<wire x1="2.794" y1="11.43" x2="12.7" y2="1.524" width="0.2032" layer="20" curve="90"/>
+<wire x1="12.7" y1="1.524" x2="22.606" y2="11.43" width="0.2032" layer="20" curve="90"/>
+<text x="12.7" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SIG</text>
+<text x="19.016790625" y="5.208446875" size="1.016" layer="16" font="vector" ratio="20" rot="MR128" align="center-left">v01</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -293,6 +302,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <circle x="-7.36" y="0" radius="0.75" width="0.05" layer="49"/>
 <circle x="7.36" y="0" radius="0.75" width="0.05" layer="49"/>
 <hole x="7.36" y="0" drill="1.5"/>
+<circle x="0" y="-7.36" radius="0.75" width="0.05" layer="49"/>
+<hole x="0" y="-7.36" drill="1.5"/>
+<circle x="0" y="7.36" radius="0.75" width="0.05" layer="200"/>
+<circle x="0" y="9.87" radius="0.75" width="0.05" layer="200"/>
+<circle x="0" y="12.78" radius="0.75" width="0.05" layer="200"/>
+<circle x="0" y="15.91" radius="0.75" width="0.05" layer="200"/>
 </package>
 </packages>
 </library>
@@ -492,49 +507,47 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="DESIGNER" value="" x="-13.97" y="-21.59" size="1.778" layer="27" display="off"/>
 <attribute name="REV" value="" x="-13.97" y="-21.59" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IC1" library="allegro" library_urn="urn:adsk.eagle:library:93" package="SOT23-W" package3d_urn="urn:adsk.eagle:package:3443/1" value="A1302LH" x="-40.64" y="-17.78" smashed="yes">
-<attribute name="MF" value="ALLEGRO MICROSYSTEMS, INC." x="-40.64" y="-17.78" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="A1302ELHLT-T" x="-40.64" y="-17.78" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="-42.29" y="-15.58" size="1.27" layer="25"/>
-<attribute name="OC_FARNELL" value="1457209" x="-40.64" y="-17.78" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="31K6638" x="-40.64" y="-17.78" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="-42.84" y="-21.63" size="1.27" layer="27"/>
+<element name="IC1" library="allegro" library_urn="urn:adsk.eagle:library:93" package="SOT23-W" package3d_urn="urn:adsk.eagle:package:3443/1" value="A1302LH" x="12.7" y="21.336" smashed="yes">
+<attribute name="MF" value="ALLEGRO MICROSYSTEMS, INC." x="12.7" y="21.336" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="A1302ELHLT-T" x="12.7" y="21.336" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="11.05" y="23.536" size="1.27" layer="25"/>
+<attribute name="OC_FARNELL" value="1457209" x="12.7" y="21.336" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="31K6638" x="12.7" y="21.336" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="10.5" y="17.486" size="1.27" layer="27"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" package="1X03_LONGPADS" value="" x="-40.64" y="-26.67" smashed="yes">
-<attribute name="NAME" x="-41.91" y="-24.638" size="0.6096" layer="25" font="vector" ratio="20"/>
-<attribute name="VALUE" x="-41.91" y="-29.337" size="0.6096" layer="27" font="vector" ratio="20"/>
+<element name="J1" library="SparkFun-Connectors" package="1X03_LONGPADS" value="" x="10.16" y="7.493" smashed="yes">
+<attribute name="NAME" x="8.89" y="9.525" size="0.6096" layer="25" font="vector" ratio="20"/>
+<attribute name="VALUE" x="8.89" y="4.826" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
 <element name="U$1" library="Servo_Horns" package="MEDIUM_HORN_16MM" value="" x="12.7" y="11.43" smashed="yes"/>
 </elements>
 <signals>
 <signal name="GND">
-<polygon width="0.2032" layer="1" isolate="0.3048">
-<vertex x="0" y="0"/>
-<vertex x="25.4" y="0"/>
-<vertex x="25.4" y="25.4"/>
-<vertex x="0" y="25.4"/>
-</polygon>
-<polygon width="0.2032" layer="16" isolate="0.3048">
-<vertex x="0" y="25.4"/>
-<vertex x="25.4" y="25.4"/>
-<vertex x="25.4" y="0"/>
-<vertex x="0" y="0"/>
-</polygon>
 <contactref element="IC1" pad="3"/>
 <contactref element="J1" pad="3"/>
-<wire x1="-40.64" y1="-16.48" x2="-35.56" y2="-26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="15.24" y1="7.493" x2="15.24" y2="9.525" width="0.3048" layer="1"/>
+<wire x1="15.24" y1="9.525" x2="16.256" y2="10.541" width="0.3048" layer="1"/>
+<wire x1="16.256" y1="10.541" x2="16.256" y2="20.828" width="0.3048" layer="1"/>
+<wire x1="14.448" y1="22.636" x2="12.7" y2="22.636" width="0.3048" layer="1"/>
+<wire x1="16.256" y1="20.828" x2="14.448" y2="22.636" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$1">
 </signal>
 <signal name="VCC">
 <contactref element="IC1" pad="1"/>
 <contactref element="J1" pad="1"/>
-<wire x1="-41.74" y1="-19.08" x2="-40.64" y2="-26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="11.6" y1="20.036" x2="11.6" y2="16.68" width="0.3048" layer="1"/>
+<wire x1="11.6" y1="16.68" x2="10.16" y2="15.24" width="0.3048" layer="1"/>
+<wire x1="10.16" y1="15.24" x2="10.16" y2="7.493" width="0.3048" layer="1"/>
 </signal>
 <signal name="OUT">
 <contactref element="IC1" pad="2"/>
 <contactref element="J1" pad="2"/>
-<wire x1="-39.54" y1="-19.08" x2="-38.1" y2="-26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="13.8" y1="20.036" x2="13.8" y2="16.68" width="0.3048" layer="1"/>
+<wire x1="13.8" y1="16.68" x2="15.24" y2="15.24" width="0.3048" layer="1"/>
+<wire x1="15.24" y1="10.795" x2="12.7" y2="8.255" width="0.3048" layer="1"/>
+<wire x1="12.7" y1="8.255" x2="12.7" y2="7.493" width="0.3048" layer="1"/>
+<wire x1="15.24" y1="15.24" x2="15.24" y2="10.795" width="0.3048" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -58,6 +58,8 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="no" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="201" name="201bmp" color="15" fill="10" visible="no" active="yes"/>
 </layers>
 <library>
 <packages>
@@ -95,6 +97,12 @@
 <circle x="-7.36" y="0" radius="0.75" width="0.05" layer="49"/>
 <circle x="7.36" y="0" radius="0.75" width="0.05" layer="49"/>
 <hole x="7.36" y="0" drill="1.5"/>
+<circle x="0" y="-7.36" radius="0.75" width="0.05" layer="49"/>
+<hole x="0" y="-7.36" drill="1.5"/>
+<circle x="0" y="7.36" radius="0.75" width="0.05" layer="200"/>
+<circle x="0" y="9.87" radius="0.75" width="0.05" layer="200"/>
+<circle x="0" y="12.78" radius="0.75" width="0.05" layer="200"/>
+<circle x="0" y="15.91" radius="0.75" width="0.05" layer="200"/>
 </package>
 </packages>
 <symbols>
